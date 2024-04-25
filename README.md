@@ -20,11 +20,18 @@
 npm i react-github-embed
 ```
 
-Get your `Personal Access Token` by signing in to your github account and then go to your **setting -> developer setting -> Personal access tokens -> Generate new token**. Add it to `.env` file in the root directory.
+### Personal Access Token (PAT) setup
+As the package will make request to GitHub GraphQL API, a GitHub PAT is required to authenticate the requests.
 
-```
-REACT_APP_GITHUB_TOKEN = <YOUR_GITHUB_TOKEN>
-```
+1. Sign in to your GitHub Account
+2. Go to [Settings](https://github.com/settings/profile) -> Developer Settings -> Personal access tokens -> [Token (classics)](https://github.com/settings/tokens)
+3. Click "Generate new token" -> "Generate new Token (classic)"
+4. Give the token a name and set Expiration Date, grant `public_repo` permission
+5. Set environment variable with the token:
+
+    ```
+    REACT_APP_GITHUB_TOKEN = <YOUR_GITHUB_TOKEN>
+    ```
 
 ## Demo & Playground
 
